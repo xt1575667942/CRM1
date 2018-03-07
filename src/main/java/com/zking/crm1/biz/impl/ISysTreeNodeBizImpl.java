@@ -16,7 +16,7 @@ public class ISysTreeNodeBizImpl implements ISysTreeNodeBiz {
 
     @Override
     public List<SysTreeNode> listSysTreeNode(SysTreeNode sysTreeNode) {
-        return sysTreeNodeMapper.lists(sysTreeNode);
+        return sysTreeNodeMapper.listgg(sysTreeNode);
     }
 
     @Override
