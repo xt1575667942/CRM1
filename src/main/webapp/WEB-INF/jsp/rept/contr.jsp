@@ -1,94 +1,93 @@
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<title>jb-aptech╠ор╣иХ╪фоНд©</title>
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
-<link href="../css/style.css" rel="stylesheet" type="text/css">
-<script src="../script/common.js"></script>
+    <title>jb-aptechФ╞∙Д╦ Х╝╬Х╝║И║╧Г⌡╝</title>
+    <%@include file="/common/head.jsp" %>
 </head>
 <body>
 
-<div class="page_title">©м╩╖╧╠ов╥жнЖ</div>
+<div class="page_title">Е╝╒Ф┬╥Х╢║Г▄╝Е┬├Ф·░</div>
 <div class="button_bar">
-	<button class="common_button" onclick="help('');">╟ОжЗ</button>
-	<button class="common_button" onclick="reload();">╡Ия╞</button> 
-	</div>
+    <button class="common_button" onclick="help('');">Е╦╝Е┼╘</button>
+    <button class="common_button" onclick="reload();">Ф÷╔Х╞╒</button>
+</div>
 <table class="query_form_table">
-	<tr>
-		<th>©м╩╖цШЁф</th>
-		<td><input /></td>
-		<th>дЙ╥щ</th>
-		<td>
-			<select>
-				<option>х╚╡©</option>
-				<option>2005</option>
-				<option>2006</option>
-				<option>2007</option>
-				<option>2008</option>
-				<option>2009</option>
-				<option>2010</option>
-			</select>
-		</td>
-	</tr>
-	</table>
+    <tr>
+        <th>Е╝╒Ф┬╥Е░█Г╖╟</th>
+        <td><input /></td>
+        <th>Е╧╢Д╩╫</th>
+        <td>
+            <select>
+                <option>Е┘╗И┐╗</option>
+                <option>2005</option>
+                <option>2006</option>
+                <option>2007</option>
+                <option>2008</option>
+                <option>2009</option>
+                <option>2010</option>
+            </select>
+        </td>
+    </tr>
+</table>
 <br />
 <table class="data_list_table">
-	<tr>
-		<th>╠Ю╨е</th>
-		<th>©м╩╖цШЁф</th>
-		<th>╤╘╣╔╫П╤Нё╗т╙ё╘</th>
-	</tr>
-	<tr>
-		<td class="list_data_number">1</td>
-		<td class="list_data_ltext">╢о╨ёпео╒©ф╪╪споч╧╚к╬</td>
-		<td class="list_data_number">8789980</td>
-	</tr>
-	<tr>
-		<td class="list_data_number">2</td>
-		<td class="list_data_ltext">╠╠╬╘цВ©ф©ф╪╪споч╧╚к╬</td>
-		<td class="list_data_number">898700</td>
-	</tr>
-	<tr>
-		<td class="list_data_number">3</td>
-		<td class="list_data_ltext">л╚яТр╘р╣</td>
-		<td class="list_data_number">67760</td>
-	</tr>
-	<tr>
-		<td class="list_data_number">4</td>
-		<td class="list_data_ltext">тфдолЛ╨сял╡щ╧╚к╬</td>
-		<td class="list_data_number">35550</td>
-	</tr>
-	<tr>
-		<td class="list_data_number">5</td>
-		<td class="list_data_ltext">╠╠╬╘лЛгепео╒╪╪йУспоч╧╚к╬</td>
-		<td class="list_data_number">13900</td>
-	</tr>
-	<tr>
-		<td class="list_data_number">6</td>
-		<td class="list_data_ltext">╠╠╬╘╟всПспочтПхн╧╚к╬</td>
-		<td class="list_data_number">560900</td>
-	</tr>
-	<tr>
-		<td class="list_data_number">7</td>
-		<td class="list_data_ltext" height="15">╠╠╬╘иЯ╧БеЮя╣</td>
-		<td class="list_data_number">768900</td>
-	</tr>
-	<tr>
-		<td class="list_data_number">8</td>
-		<td class="list_data_ltext" height="35">н╚╥╩гЮдЯ╩╙╧Б</td>
-		<td class="list_data_number">330000</td>
-	</tr>
-	<tr>
-		<td class="list_data_number">9</td>
-		<td class="list_data_ltext">гЮдЯнчочйЩбК</td>
-		<td class="list_data_number">45600</td>
-	</tr>
-	<tr>
-		<td class="list_data_number">10</td>
-		<td class="list_data_ltext">╠╠╬╘╢Ся╖</td>
-		<td class="list_data_number">670080</td>
-	</tr>
-	
+    <tr>
+        <th>Г╪√Е▐╥</th>
+        <th>Е╝╒Ф┬╥Е░█Г╖╟</th>
+        <th>Х╝╒Е█∙И┤▒И╒²О╪┬Е┘┐О╪┴</th>
+    </tr>
+    <tr>
+        <td class="list_data_number">1</td>
+        <td class="list_data_ltext">Х│╙Ф╣╥Д©║Ф│╞Г╖▒Ф┼─Ф°┴И≥░Е┘╛Е▐╦</td>
+        <td class="list_data_number">8789980</td>
+    </tr>
+    <tr>
+        <td class="list_data_number">2</td>
+        <td class="list_data_ltext">Е▄≈Д╨╛Ф≤▌Г╖▒Г╖▒Ф┼─Ф°┴И≥░Е┘╛Е▐╦</td>
+        <td class="list_data_number">898700</td>
+    </tr>
+    <tr>
+        <td class="list_data_number">3</td>
+        <td class="list_data_ltext">Е╓╙И≤ЁХ█╞Д╦ </td>
+        <td class="list_data_number">67760</td>
+    </tr>
+    <tr>
+        <td class="list_data_number">4</td>
+        <td class="list_data_ltext">Д╨▒Е█≈Е╓╘Ф╡ЁГ┐÷Х█┴Е┘╛Е▐╦</td>
+        <td class="list_data_number">35550</td>
+    </tr>
+    <tr>
+        <td class="list_data_number">5</td>
+        <td class="list_data_ltext">Е▄≈Д╨╛Е╓╘Ф║╔Д©║Ф│╞Ф┼─Ф°╞Ф°┴И≥░Е┘╛Е▐╦</td>
+        <td class="list_data_number">13900</td>
+    </tr>
+    <tr>
+        <td class="list_data_number">6</td>
+        <td class="list_data_ltext">Е▄≈Д╨╛Г≥╫Г╬╫Ф°┴И≥░Х╢ёД╩╩Е┘╛Е▐╦</td>
+        <td class="list_data_number">560900</td>
+    </tr>
+    <tr>
+        <td class="list_data_number">7</td>
+        <td class="list_data_ltext" height="15">Е▄≈Д╨╛Г╔·Е┘┴Е÷╧Х╝╜</td>
+        <td class="list_data_number">768900</td>
+    </tr>
+    <tr>
+        <td class="list_data_number">8</td>
+        <td class="list_data_ltext" height="35">Ф╫█Е²┼И²▓И╦÷Е█▌Е┘┴</td>
+        <td class="list_data_number">330000</td>
+    </tr>
+    <tr>
+        <td class="list_data_number">9</td>
+        <td class="list_data_ltext">И²▓И╦÷Ф≈═И≥░Ф∙╟Г═│</td>
+        <td class="list_data_number">45600</td>
+    </tr>
+    <tr>
+        <td class="list_data_number">10</td>
+        <td class="list_data_ltext">Е▄≈Д╨╛Е╓╖Е╜╕</td>
+        <td class="list_data_number">670080</td>
+    </tr>
+
 </table>
 </body>
 </html>
