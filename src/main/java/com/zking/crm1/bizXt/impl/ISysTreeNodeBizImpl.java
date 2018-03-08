@@ -1,6 +1,6 @@
-package com.zking.crm1.biz.impl;
+package com.zking.crm1.bizXt.impl;
 
-import com.zking.crm1.biz.ISysTreeNodeBiz;
+import com.zking.crm1.bizXt.ISysTreeNodeBiz;
 import com.zking.crm1.mapper.SysTreeNodeMapper;
 import com.zking.crm1.model.SysTreeNode;
 import org.springframework.beans.factory.annotation.Autowired;
