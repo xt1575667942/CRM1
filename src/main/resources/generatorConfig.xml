@@ -26,6 +26,8 @@
             <property name="forceBigDecimals" value="false"/>
         </javaTypeResolver>
 
+
+
         <!-- 01 指定javaBean生成的位置 -->
         <!-- targetPackage：指定生成的model生成所在的包名 -->
         <!-- targetProject：指定在该项目下所在的路径  -->
