@@ -90,7 +90,7 @@
 <div class="wu-main" data-options="region:'center'">
     <div id="tt" class="easyui-tabs" data-options="border:false,fit:true">
         <div title="首页" data-options="closable:false,iconCls:'icon-tip',cls:'pd3'">
-
+            <img src="/images/ktw.jpg" style="width: 1100px;height: 580px;">
         </div>
     </div>
 </div>

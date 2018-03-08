@@ -1,13 +1,11 @@
 package com.zking.crm1.biz.impl;
 
-import com.zking.crm1.biz.ISysTreeNodeBiz;
+import com.zking.crm1.bizXt.ISysTreeNodeBiz;
 import com.zking.crm1.model.SysTreeNode;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
-
-import static org.junit.Assert.*;
 
 public class ISysTreeNodeBizImplTest extends BaseTest{
 

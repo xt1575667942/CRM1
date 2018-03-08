@@ -11,7 +11,9 @@
 
     <!--1) use-dafault-filters="false"的情况下，根据表达式包含(include-filter)或排除(exclude-filter)指定包-->
     <context:component-scan base-package="com.zking.crm1" use-default-filters="false">
-        <context:include-filter type="regex" expression=".+\.controller\..*"/>
+        <context:include-filter type="regex" expression=".+\.controllerXt\..*"/>
+        <context:include-filter type="regex" expression=".+\.controllerXl\..*"/>
+        <context:include-filter type="regex" expression=".+\.controllerXd\..*"/>
         <!--<context:exclude-filter type="regex" expression=".+\.controller2\..*"/>-->
     </context:component-scan>
 
