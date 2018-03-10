@@ -52,7 +52,6 @@
                     closable : true
                 });
             }
-
         }
     </script>
 </head>
