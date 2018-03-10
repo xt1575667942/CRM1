@@ -1,8 +1,4 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix="t" uri="http://www.springframework.org/tags"%>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
-<%@ taglib prefix="f" uri="http://www.springframework.org/tags/form"%>
 <base href="<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+request.getContextPath()+"/"%>">
 <meta http-equiv="pragma" content="no-cache">
 <meta http-equiv="cache-control" content="no-cache">
@@ -10,4 +6,11 @@
 <script type="text/javascript"src="js/contextPath.jsp"></script>
 <link href="/css/style.css" rel="stylesheet" type="text/css">
 <script src="/script/common.js"></script>
+<script type="text/javascript" src="/jquery/jquery-1.5.2.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/easyui/1.3.4/themes/default/easyui.css" />
+<link rel="stylesheet" type="text/css" href="/css/wu.css" />
+<link rel="stylesheet" type="text/css" href="/css/icon.css" />
+<script type="text/javascript" src="/js/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="/easyui/1.3.4/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="/easyui/1.3.4/locale/easyui-lang-zh_CN.js"></script>
 

@@ -7,6 +7,7 @@ function help(msg){
 
 function to(url){
     window.location.href=url;
+
 }
 function back(){
     history.go(-1);

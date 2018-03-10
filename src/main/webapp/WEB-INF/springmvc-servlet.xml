@@ -38,7 +38,7 @@
     <mvc:resources location="/js/" mapping="/js/**"/>
     <mvc:resources location="/script/" mapping="/script/**"/>
     <mvc:resources location="/common/" mapping="/common/**"/>
-
+    <mvc:resources location="/jquery/" mapping="/jquery/**"/>
 
 
 </beans>
