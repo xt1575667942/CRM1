@@ -7,7 +7,10 @@
     <settings>
         <setting name="logImpl" value="LOG4J2"/>
     </settings>
-
+    <plugins>
+        <plugin interceptor="com.github.pagehelper.PageInterceptor">
+        </plugin>
+    </plugins>
 
 
     <!-- 配置mybatis运行环境 -->
