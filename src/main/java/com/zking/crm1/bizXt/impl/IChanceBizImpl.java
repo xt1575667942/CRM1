@@ -20,6 +20,11 @@ public class IChanceBizImpl implements IChanceBiz {
     }
 
     @Override
+    public List<Chance> listChance2(Chance chance, PageBean pageBean) {
+        return chanceMapper.listchance2(chance);
+    }
+
+    @Override
     public void delChance(Chance chance) {
         chanceMapper.deleteByPrimaryKey(chance.getChcId());
     }
@@ -37,5 +42,10 @@ public class IChanceBizImpl implements IChanceBiz {
     @Override
     public void editChanceStaus(Chance chance) {
          chanceMapper.editChanceStats(chance);
+    }
+
+    @Override
+    public void editChance(Chance chance) {
+        chanceMapper.updateByPrimaryKeySelective(chance);
     }
 }
