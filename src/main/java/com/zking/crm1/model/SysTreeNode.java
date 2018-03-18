@@ -16,17 +16,10 @@ public class SysTreeNode {
     private String url;
     public boolean isLeaf;
 
+    private Long usrRoleId;
+
     public SysTreeNode() {
         super();
-    }
-
-    public SysTreeNode(Integer treeNodeId, String treeNodeName, Long treeNodeType, Long postion, Integer parentNodeId, String url) {
-        this.treeNodeId = treeNodeId;
-        this.treeNodeName = treeNodeName;
-        this.treeNodeType = treeNodeType;
-        this.postion = postion;
-        this.parentNodeId = parentNodeId;
-        this.url = url;
     }
 
     @Override
@@ -38,6 +31,8 @@ public class SysTreeNode {
                 ", postion=" + postion +
                 ", parentNodeId=" + parentNodeId +
                 ", url='" + url + '\'' +
+                ", isLeaf=" + isLeaf +
+                ", usrRoleId=" + usrRoleId +
                 '}';
     }
 
@@ -87,5 +82,32 @@ public class SysTreeNode {
 
     public void setUrl(String url) {
         this.url = url;
+    }
+
+    public boolean isLeaf() {
+        return isLeaf;
+    }
+
+    public void setLeaf(boolean leaf) {
+        isLeaf = leaf;
+    }
+
+    public Long getUsrRoleId() {
+        return usrRoleId;
+    }
+
+    public void setUsrRoleId(Long usrRoleId) {
+        this.usrRoleId = usrRoleId;
+    }
+
+    public SysTreeNode(Integer treeNodeId, String treeNodeName, Long treeNodeType, Long postion, Integer parentNodeId, String url, boolean isLeaf, Long usrRoleId) {
+        this.treeNodeId = treeNodeId;
+        this.treeNodeName = treeNodeName;
+        this.treeNodeType = treeNodeType;
+        this.postion = postion;
+        this.parentNodeId = parentNodeId;
+        this.url = url;
+        this.isLeaf = isLeaf;
+        this.usrRoleId = usrRoleId;
     }
 }

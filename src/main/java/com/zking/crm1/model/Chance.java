@@ -26,15 +26,25 @@ public class Chance {
 
     private String chcCreateBy;
 
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm")
     private Date chcCreateDate;
 
     private Long chcDueId;
 
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm")
     private Date chcDueDate;
 
-    private Integer chcStaus;
+    private String chcStaus;
 
-    private PageBean pageBean;
+
+    //时间1
+    private String data1;
+
+    //时间1
+    private String data2;
+
+
+
 
     public Chance() {
         super();
@@ -56,13 +66,33 @@ public class Chance {
                 ", chcCreateDate=" + chcCreateDate +
                 ", chcDueId=" + chcDueId +
                 ", chcDueDate=" + chcDueDate +
-                ", chcStaus=" + chcStaus +
-                ", pageBean=" + pageBean +
+                ", chcStaus='" + chcStaus + '\'' +
+                ", data1=" + data1 +
+                ", data2=" + data2 +
                 '}';
     }
 
     public Long getChcId() {
         return chcId;
+    }
+
+    public Chance(Long chcId, String chcSource, String chcCustName, String chcTitle, Integer chcRate, String chcLinkman, String chcTel, String chcDesc, Long chcCreateId, String chcCreateBy, Date chcCreateDate, Long chcDueId, Date chcDueDate, String chcStaus, String data1, String data2) {
+        this.chcId = chcId;
+        this.chcSource = chcSource;
+        this.chcCustName = chcCustName;
+        this.chcTitle = chcTitle;
+        this.chcRate = chcRate;
+        this.chcLinkman = chcLinkman;
+        this.chcTel = chcTel;
+        this.chcDesc = chcDesc;
+        this.chcCreateId = chcCreateId;
+        this.chcCreateBy = chcCreateBy;
+        this.chcCreateDate = chcCreateDate;
+        this.chcDueId = chcDueId;
+        this.chcDueDate = chcDueDate;
+        this.chcStaus = chcStaus;
+        this.data1 = data1;
+        this.data2 = data2;
     }
 
     public void setChcId(Long chcId) {
@@ -165,37 +195,29 @@ public class Chance {
         this.chcDueDate = chcDueDate;
     }
 
-    public Integer getChcStaus() {
+    public String getChcStaus() {
         return chcStaus;
     }
 
-    public void setChcStaus(Integer chcStaus) {
+    public void setChcStaus(String chcStaus) {
         this.chcStaus = chcStaus;
     }
 
-    public PageBean getPageBean() {
-        return pageBean;
+    public String getData1() {
+        return data1;
     }
 
-    public void setPageBean(PageBean pageBean) {
-        this.pageBean = pageBean;
+    public void setData1(String data1) {
+        this.data1 = data1;
     }
 
-    public Chance(Long chcId, String chcSource, String chcCustName, String chcTitle, Integer chcRate, String chcLinkman, String chcTel, String chcDesc, Long chcCreateId, String chcCreateBy, Date chcCreateDate, Long chcDueId, Date chcDueDate, Integer chcStaus, PageBean pageBean) {
-        this.chcId = chcId;
-        this.chcSource = chcSource;
-        this.chcCustName = chcCustName;
-        this.chcTitle = chcTitle;
-        this.chcRate = chcRate;
-        this.chcLinkman = chcLinkman;
-        this.chcTel = chcTel;
-        this.chcDesc = chcDesc;
-        this.chcCreateId = chcCreateId;
-        this.chcCreateBy = chcCreateBy;
-        this.chcCreateDate = chcCreateDate;
-        this.chcDueId = chcDueId;
-        this.chcDueDate = chcDueDate;
-        this.chcStaus = chcStaus;
-        this.pageBean = pageBean;
+    public String getData2() {
+        return data2;
     }
+
+    public void setData2(String data2) {
+        this.data2 = data2;
+    }
+
+
 }
