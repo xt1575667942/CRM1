@@ -22,5 +22,7 @@ public interface ChanceMapper {
 
     List<Chance> listchance(Chance chance);
 
+    List<Chance> listchance2(Chance chance);
+
     void editChanceStats(Chance chance);
 }
