@@ -16,7 +16,7 @@
       <arg column="chc_create_date" jdbcType="TIMESTAMP" javaType="java.util.Date" />
       <arg column="chc_due_id" jdbcType="BIGINT" javaType="java.lang.Long" />
       <arg column="chc_due_date" jdbcType="TIMESTAMP" javaType="java.util.Date" />
-      <arg column="chc_staus" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="chc_staus" jdbcType="VARCHAR" javaType="java.lang.String" />
     </constructor>
   </resultMap>
 
@@ -34,7 +34,7 @@
         <result column="chc_create_date" property="chcCreateDate" javaType="java.util.Date" />
         <result column="chc_due_id" property="chcDueId" javaType="java.lang.Long" />
         <result column="chc_due_date" property="chcDueDate" javaType="java.util.Date" />
-        <result column="chc_staus" property="chcStaus" javaType="java.lang.Integer" />
+        <result column="chc_staus" property="chcStaus" javaType="java.lang.String" />
 
 
     </resultMap>
@@ -51,9 +51,22 @@
 
     <select id="listchance" resultMap="list" resultType="com.zking.crm1.model.Chance"
             parameterType="com.zking.crm1.model.Chance">
-        select * from sal_chance
+        select * from sal_chance where  chc_staus!='未指派'
+
         <if test="chcCustName!=null and chcCustName!=''">
-            where chc_cust_name like concat('%',#{chcCustName},'%')
+            and chc_cust_name like concat('%',#{chcCustName},'%')
+        </if>
+
+        <if test="data1!=null and data1!=''and data2!=null and data2!=''">
+            and chc_create_date>=#{data1} and chc_create_date&lt;=#{data2}
+        </if>
+         order by chc_id desc
+    </select>
+    <select id="listchance2" resultMap="list" resultType="com.zking.crm1.model.Chance"
+            parameterType="com.zking.crm1.model.Chance">
+        select * from sal_chance where  chc_staus='未指派'
+        <if test="chcCustName!=null and chcCustName!=''">
+            and chc_cust_name like concat('%',#{chcCustName},'%')
         </if>
         <if test="chcTitle!=null and chcTitle!=''">
             and chc_title like concat('%',#{chcTitle},'%')
@@ -62,6 +75,7 @@
             and chc_linkman like concat('%',#{chcLinkman},'%')
         </if>
         order by chc_id desc
+
     </select>
     <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
     delete from sal_chance
@@ -77,7 +91,7 @@
       #{chcTitle,jdbcType=VARCHAR}, #{chcRate,jdbcType=INTEGER}, #{chcLinkman,jdbcType=VARCHAR}, 
       #{chcTel,jdbcType=VARCHAR}, #{chcDesc,jdbcType=VARCHAR}, #{chcCreateId,jdbcType=BIGINT}, 
       #{chcCreateBy,jdbcType=VARCHAR}, #{chcCreateDate,jdbcType=TIMESTAMP}, #{chcDueId,jdbcType=BIGINT}, 
-      #{chcDueDate,jdbcType=TIMESTAMP}, #{chcStaus,jdbcType=INTEGER})
+      #{chcDueDate,jdbcType=TIMESTAMP}, #{chcStaus,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.zking.crm1.model.Chance" >
     insert into sal_chance
@@ -166,7 +180,7 @@
         #{chcDueDate,jdbcType=TIMESTAMP},
       </if>
       <if test="chcStaus != null" >
-        #{chcStaus,jdbcType=INTEGER},
+        #{chcStaus,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -210,7 +224,7 @@
         chc_due_date = #{chcDueDate,jdbcType=TIMESTAMP},
       </if>
       <if test="chcStaus != null" >
-        chc_staus = #{chcStaus,jdbcType=INTEGER},
+        chc_staus = #{chcStaus,jdbcType=VARCHAR},
       </if>
     </set>
     where chc_id = #{chcId,jdbcType=BIGINT}
@@ -229,14 +243,14 @@
       chc_create_date = #{chcCreateDate,jdbcType=TIMESTAMP},
       chc_due_id = #{chcDueId,jdbcType=BIGINT},
       chc_due_date = #{chcDueDate,jdbcType=TIMESTAMP},
-      chc_staus = #{chcStaus,jdbcType=INTEGER}
+      chc_staus = #{chcStaus,jdbcType=VARCHAR}
     where chc_id = #{chcId,jdbcType=BIGINT}
   </update>
     <update id="editChanceStats" parameterType="com.zking.crm1.model.Chance">
         update sal_chance
         set
         chc_due_id = #{chcDueId,jdbcType=BIGINT},
-        chc_staus = #{chcStaus,jdbcType=INTEGER}
+        chc_staus = #{chcStaus,jdbcType=VARCHAR}
         where chc_id = #{chcId,jdbcType=BIGINT}
     </update>
 </mapper>
