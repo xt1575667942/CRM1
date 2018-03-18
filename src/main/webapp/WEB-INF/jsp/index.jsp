@@ -62,8 +62,8 @@
         <h1>客户关系管理系统</h1>
     </div>
     <div class="wu-header-right">
-        <p><strong class="easyui-tooltip" title="2条未读消息">admin</strong>，欢迎您！</p>
-        <p><a href="#">网站首页</a>|<a href="#">支持论坛</a>|<a href="#">帮助中心</a>|<a href="#">安全退出</a></p>
+        <p><strong class="easyui-tooltip" title="2条未读消息">${user.usrName}</strong>，欢迎您！</p>
+        <p><a href="#">网站首页</a>|<a href="#">支持论坛</a>|<a href="#">帮助中心</a>|<a href="/input/jsp/login">登录</a></p>
     </div>
 </div>
 <!-- end of header -->
@@ -89,7 +89,7 @@
 <div class="wu-main" data-options="region:'center'">
     <div id="tt" class="easyui-tabs" data-options="border:false,fit:true">
         <div title="首页" data-options="closable:false,iconCls:'icon-tip',cls:'pd3'">
-            <img src="/images/ktw.jpg" style="width: 1100px;height: 580px;">
+            <img src="/images/5a61a229aff84.jpg" style="width: 1100px;height: 580px;">
         </div>
     </div>
 </div>
