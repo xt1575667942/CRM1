@@ -3,6 +3,7 @@ package com.zking.crm1.controllerXt;
 import com.zking.crm1.bizXt.ISysTreeNodeBiz;
 import com.zking.crm1.model.SysTreeNode;
 
+import com.zking.crm1.model.User;
 import com.zking.crm1.util.JsonUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -38,8 +39,10 @@ public class SysTreeNodeController {
         System.out.println("kkkk"+ss);
         if("list".equals(ss)){
             System.out.println("进了-------大节点");
+            User u2=(User)session.getAttribute("user");
+            sysTreeNode.setUsrRoleId(u2.getUsrRoleId());
             List<SysTreeNode> list = sysTreeNodeBiz.listSysTreeNode(sysTreeNode);
-            System.out.println("到了后台");
+            System.out.println("到了后台"+u2.getUsrRoleId());
             session.setAttribute("lists",list);
         }else{
             System.out.println("进了-------小节点");
